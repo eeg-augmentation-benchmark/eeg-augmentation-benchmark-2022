@@ -1,0 +1,46 @@
+name: unittests
+on:
+  pull_request:
+  push:
+    branches: main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    strategy:
+      fail-fast: false
+      matrix:
+        python: [3.8]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setting Up Conda Braindecode Environment
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          environment-file: environment.yml
+          python-version: 3.7
+          activate-environment: braindecode
+          auto-activate-base: false
+      # Show Conda and Python Versions
+      - run: conda --version
+      - run: conda info --envs
+      - run: which python
+      - name: Installations
+        run: |  
+          pip install -e .
+      - name: Run pytest
+        run: |
+          pip install pytest
+          pip install pytest-cov
+          pytest --cov=BAE --cov-report=xml
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage/reports/
+          fail_ci_if_error: true
+          files: ./coverage.xml
+          path_to_write_report: ./coverage/codecov_report.txt
+          verbose: true
