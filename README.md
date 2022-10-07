@@ -46,7 +46,7 @@ pip install -e .
 
 Parameter searches presented on figures 4, 9, 13 and 14 can be run with:
 ```bash
-bash param_search/run.sh $DEVICE
+bash param_search/run_sleep.sh $DEVICE
 bash param_search/run_bci.sh $DEVICE
 ```
 where `$DEVICE` corresponds to `cpu` or any cuda device that should be used for training.
@@ -63,7 +63,7 @@ They will be saved in `outputs/physionet/figures/` and `outputs/BCI/figures/`.
 
 Likewise, to plot the learning curves from figures 5, 10, 15, 16 and 19, as well as the boxplots 6, 11, 12, 17 and 18, one can run:
 ```bash
-bash learning_curves/run.sh $DEVICE
+bash learning_curves/run_sleep.sh $DEVICE
 bash learning_curves/run_bci.sh $DEVICE
 bash learning_curves/plot_all.sh
 ```
