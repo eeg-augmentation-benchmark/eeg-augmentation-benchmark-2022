@@ -4,7 +4,7 @@ This repository contains the code used in the experiments of _Rommel, Paillard, 
 
 ![flake8](https://github.com/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022/actions/workflows/lint.yml/badge.svg) 
 ![tests](https://github.com/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022/actions/workflows/tests.yml/badge.svg)
-[![codecov](https://codecov.io/gh/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022/branch/main/graph/badge.svg?)](https://codecov.io/gh/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022)
+[![codecov](https://codecov.io/gh/eeg-augmentation-benchmark/eeg-augmentation-benchmark-2022/branch/main/graph/badge.svg?token=ZQJKAAN68O)](https://codecov.io/gh/eeg-augmentation-benchmark/eeg-augmentation-benchmark-2022)
 
 ---
 
