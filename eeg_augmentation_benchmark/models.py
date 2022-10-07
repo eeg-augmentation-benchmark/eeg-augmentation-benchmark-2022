@@ -8,8 +8,8 @@ from braindecode.util import set_random_seeds
 from skorch.callbacks import EarlyStopping
 from skorch.callbacks.training import TrainEndCheckpoint
 
-from BAE.utils import find_device
-from BAE.utils import worker_init_fn
+from eeg_augmentation_benchmark.utils import find_device
+from eeg_augmentation_benchmark.utils import worker_init_fn
 
 
 def get_EEGClassifier(

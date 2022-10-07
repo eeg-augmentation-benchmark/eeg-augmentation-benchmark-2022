@@ -2,9 +2,9 @@
 
 This repository contains the code used in the experiments of _Rommel, Paillard, Moreau and Gramfort, ["Data augmentation for learning predictive models on EEG: a systematic comparison"](https://arxiv.org/abs/2206.14483), 2022_.
 
-![flake8](https://github.com/lapaill/BAE/actions/workflows/lint.yml/badge.svg) 
-![tests](https://github.com/lapaill/BAE/actions/workflows/tests.yml/badge.svg)
-[![codecov](https://codecov.io/gh/lapaill/BAE/branch/main/graph/badge.svg?token=MIPDEL7CBB)](https://codecov.io/gh/lapaill/BAE)
+![flake8](https://github.com/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022/actions/workflows/lint.yml/badge.svg) 
+![tests](https://github.com/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022/actions/workflows/tests.yml/badge.svg)
+[![codecov](https://codecov.io/gh/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022/branch/main/graph/badge.svg?)](https://codecov.io/gh/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022)
 
 ---
 
@@ -12,7 +12,7 @@ This repository contains the code used in the experiments of _Rommel, Paillard, 
 
 Start by cloning the repository:
 ```bash
-git clone https://github.com/eeg-augmentation-benchmark/eeg-augmentation-benchmark-2022.git
+git clone https://github.com/eeg_augmentation_benchmark/eeg_augmentation_benchmark-2022.git
 ```
 
 ### Requirements

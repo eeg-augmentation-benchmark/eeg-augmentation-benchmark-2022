@@ -5,13 +5,15 @@ import pytest
 from braindecode.augmentation import TimeReverse
 from sklearn.model_selection import train_test_split
 
-from BAE.train import get_clf
-from BAE.train import get_dataset
-from BAE.training_utils import cross_val_aug
-from BAE.training_utils import fit_and_predict
-from BAE.training_utils import fit_and_predict_one_subject
-from BAE.training_utils import parallel_train_subjects
-from BAE.utils import downsample
+from eeg_augmentation_benchmark.train import get_clf
+from eeg_augmentation_benchmark.train import get_dataset
+from eeg_augmentation_benchmark.training_utils import cross_val_aug
+from eeg_augmentation_benchmark.training_utils import fit_and_predict
+from eeg_augmentation_benchmark.training_utils import (
+    fit_and_predict_one_subject
+)
+from eeg_augmentation_benchmark.training_utils import parallel_train_subjects
+from eeg_augmentation_benchmark.utils import downsample
 
 
 def test_fit_and_predict(random_state, cachedir):

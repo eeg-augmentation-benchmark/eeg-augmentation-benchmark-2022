@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from braindecode.augmentation.transforms import TimeReverse
 
-from BAE.utils import get_labels
+from eeg_augmentation_benchmark.utils import get_labels
 from plot_utils import FONTSIZE
 from plot_utils import plot_signal
 from plot_utils import setup_style

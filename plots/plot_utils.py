@@ -9,7 +9,7 @@ from braindecode.preprocessing import Preprocessor
 from braindecode.preprocessing import preprocess
 from mne.time_frequency.multitaper import psd_array_multitaper
 
-from BAE.utils import EEGDataset
+from eeg_augmentation_benchmark.utils import EEGDataset
 
 FONTSIZE = 8
 # A4 width: 6.3 inches 2*1.25 margins --> 5.8 figures

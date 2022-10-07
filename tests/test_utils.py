@@ -4,7 +4,7 @@ from braindecode.augmentation import AugmentedDataLoader
 from braindecode.augmentation import SignFlip
 from braindecode.augmentation import TimeReverse
 
-from BAE.utils import ClassWiseAugmentation
+from eeg_augmentation_benchmark.utils import ClassWiseAugmentation
 
 
 def test_classwise_aug(mock_dataset, random_state):

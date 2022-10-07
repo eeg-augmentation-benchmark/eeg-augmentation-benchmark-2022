@@ -4,9 +4,9 @@ import pytest
 from braindecode.augmentation import AugmentedDataLoader
 from braindecode.augmentation import IdentityTransform
 
-from BAE.param_search_utils import BCI_CHANNELS
-from BAE.param_search_utils import DEFAULT_AUG_PARAMS
-from BAE.param_search_utils import get_augmentation
+from eeg_augmentation_benchmark.param_search_utils import BCI_CHANNELS
+from eeg_augmentation_benchmark.param_search_utils import DEFAULT_AUG_PARAMS
+from eeg_augmentation_benchmark.param_search_utils import get_augmentation
 from tests.conftest import MockDataset
 
 

@@ -1,8 +1,8 @@
 
 from braindecode.augmentation import AugmentedDataLoader
 
-from BAE.train import get_augmentations_list
-from BAE.train import get_dataset
+from eeg_augmentation_benchmark.train import get_augmentations_list
+from eeg_augmentation_benchmark.train import get_dataset
 
 
 def test_get_augmentations_list(random_state, mock_dataset, cachedir):

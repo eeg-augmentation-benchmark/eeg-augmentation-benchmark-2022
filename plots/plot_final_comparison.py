@@ -7,8 +7,8 @@ import pandas as pd
 import seaborn as sns
 from sklearn.metrics import balanced_accuracy_score
 
-import BAE
-from BAE.scoring import compute_relative_improvement
+import eeg_augmentation_benchmark
+from eeg_augmentation_benchmark.scoring import compute_relative_improvement
 from plots.plot_utils import setup_style, get_tfs_names
 from plots.plot_utils import infer_task
 
@@ -162,7 +162,9 @@ if __name__ == "__main__":
         # Create saving path
         ext = "png" if args.png else "pdf"
         ds = task_properties["dataset"]
-        fig_dir = Path(BAE.__file__).parent / f'../outputs/{ds}/figures/'
+        fig_dir = Path(eeg_augmentation_benchmark.__file__).parent / (
+            f'../outputs/{ds}/figures/'
+        )
         fig_dir.mkdir(parents=True, exist_ok=True)
 
         # Plot and save learning curve

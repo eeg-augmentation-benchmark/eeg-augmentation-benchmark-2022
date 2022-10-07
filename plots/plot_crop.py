@@ -8,8 +8,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-import BAE
-from BAE.scoring import compute_score
+import eeg_augmentation_benchmark
+from eeg_augmentation_benchmark.scoring import compute_score
 from plot_utils import FONTSIZE
 from plot_utils import setup_style
 
@@ -19,7 +19,7 @@ setup_style()
 
 # %% Load LR-curve (adapt the path)
 
-curves_path = Path(BAE.__file__).parent / \
+curves_path = Path(eeg_augmentation_benchmark.__file__).parent / \
     '../outputs/BCI/'
 fname_learning_curve = (
     curves_path /
@@ -65,7 +65,7 @@ ax.legend(fontsize=FONTSIZE)
 #              fontsize=FONTSIZE)
 # ax.set_ylim(-0.3, 0.9)
 plt.tight_layout()
-fig_path = Path(BAE.__file__).parent / f'../outputs/{dataset}/figures/'
+fig_path = Path(eeg_augmentation_benchmark.__file__).parent / f'../outputs/{dataset}/figures/'
 
 plt.savefig(fig_path / f'box_plot_crop.pdf')
 plt.show()

@@ -1,6 +1,6 @@
 
-from BAE.class_wise_aug import prepare_aug_list
-from BAE.utils import ClassWiseAugmentation
+from eeg_augmentation_benchmark.class_wise_aug import prepare_aug_list
+from eeg_augmentation_benchmark.utils import ClassWiseAugmentation
 
 
 def test_get_CW_augs():

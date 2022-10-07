@@ -1,7 +1,7 @@
 import pytest
 
-from BAE.scoring import compute_relative_improvement
-from BAE.scoring import compute_score
+from eeg_augmentation_benchmark.scoring import compute_relative_improvement
+from eeg_augmentation_benchmark.scoring import compute_score
 
 
 @pytest.mark.parametrize("per_fold", [True, False])

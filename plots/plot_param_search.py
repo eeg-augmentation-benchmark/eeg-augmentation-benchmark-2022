@@ -7,8 +7,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-import BAE
-from BAE.scoring import compute_relative_improvement
+import eeg_augmentation_benchmark
+from eeg_augmentation_benchmark.scoring import compute_relative_improvement
 from plots.plot_utils import setup_style, make_fixed_palette, get_tfs_names
 from plots.plot_utils import infer_task
 
@@ -174,7 +174,9 @@ if __name__ == "__main__":
     # Create saving path
     ext = "png" if args.png else "pdf"
     dataset = task_properties["dataset"]
-    fig_dir = Path(BAE.__file__).parent / f'../outputs/{dataset}/figures/'
+    fig_dir = Path(eeg_augmentation_benchmark.__file__).parent / (
+        f'../outputs/{dataset}/figures/'
+    )
     fig_dir.mkdir(parents=True, exist_ok=True)
     fig_save_path = fig_dir / \
         f'param-search-{dataset}-{args.tfs_cat}{args.suffix}.{ext}'

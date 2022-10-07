@@ -27,14 +27,14 @@ from braindecode.preprocessing import exponential_moving_standardize
 from braindecode.preprocessing import preprocess
 from sklearn.preprocessing import scale
 
-from BAE.models import CLF_PARAMS_BCI
-from BAE.models import CLF_PARAMS_BCI_CROP
-from BAE.models import CLF_PARAMS_PHYSIONET
-from BAE.models import MODEL_PARAMS_BCI
-from BAE.models import MODEL_PARAMS_BCI_CROP
-from BAE.models import MODEL_PARAMS_PHYSIONET
-from BAE.models import get_EEGClassifier
-from BAE.utils import EEGDataset
+from eeg_augmentation_benchmark.models import CLF_PARAMS_BCI
+from eeg_augmentation_benchmark.models import CLF_PARAMS_BCI_CROP
+from eeg_augmentation_benchmark.models import CLF_PARAMS_PHYSIONET
+from eeg_augmentation_benchmark.models import MODEL_PARAMS_BCI
+from eeg_augmentation_benchmark.models import MODEL_PARAMS_BCI_CROP
+from eeg_augmentation_benchmark.models import MODEL_PARAMS_PHYSIONET
+from eeg_augmentation_benchmark.models import get_EEGClassifier
+from eeg_augmentation_benchmark.utils import EEGDataset
 
 
 BEST_PARAMS = {

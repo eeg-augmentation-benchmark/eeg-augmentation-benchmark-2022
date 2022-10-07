@@ -15,9 +15,9 @@ from sklearn.utils.class_weight import compute_class_weight
 from skorch.helper import predefined_split
 from torch.utils.data.dataset import Subset
 
-from BAE.utils import get_labels
-from BAE.utils import get_sessions
-from BAE.utils import worker_init_fn
+from eeg_augmentation_benchmark.utils import get_labels
+from eeg_augmentation_benchmark.utils import get_sessions
+from eeg_augmentation_benchmark.utils import worker_init_fn
 
 
 def fit_and_predict(

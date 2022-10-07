@@ -5,7 +5,7 @@ from itertools import product
 import braindecode.augmentation as Augmentations
 import numpy as np
 
-from BAE.utils import ClassWiseAugmentation
+from eeg_augmentation_benchmark.utils import ClassWiseAugmentation
 
 BEST_AUG_PARAMS = {
     'GaussianNoise': {

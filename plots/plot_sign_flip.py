@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from braindecode.augmentation import SignFlip
 
-from BAE.utils import get_labels
+from eeg_augmentation_benchmark.utils import get_labels
 from plot_utils import FONTSIZE
 from plot_utils import plot_signal
 from plot_utils import setup_style

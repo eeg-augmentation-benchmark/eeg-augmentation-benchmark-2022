@@ -6,15 +6,17 @@ from time import perf_counter
 
 import numpy as np
 import pandas as pd
-from BAE.train import get_augmentations_list
-from BAE.train import get_clf
-from BAE.train import get_dataset
-from BAE.training_utils import cross_val_aug
-from BAE.training_utils import parallel_train_subjects
-from BAE.training_utils import parallel_train_subjects_crop
-from BAE.utils import downsample
-from BAE.utils import find_device
-from BAE.utils import get_subjects
+from eeg_augmentation_benchmark.train import get_augmentations_list
+from eeg_augmentation_benchmark.train import get_clf
+from eeg_augmentation_benchmark.train import get_dataset
+from eeg_augmentation_benchmark.training_utils import cross_val_aug
+from eeg_augmentation_benchmark.training_utils import parallel_train_subjects
+from eeg_augmentation_benchmark.training_utils import (
+    parallel_train_subjects_crop
+)
+from eeg_augmentation_benchmark.utils import downsample
+from eeg_augmentation_benchmark.utils import find_device
+from eeg_augmentation_benchmark.utils import get_subjects
 from skorch.callbacks import LRScheduler
 
 parser = ArgumentParser(

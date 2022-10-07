@@ -149,7 +149,7 @@ def box_plot(score, ax, per_class=True, save_fig=None):
 
 
 # %% PLot all the .pkl files of a folder.
-os.chdir('/home/user/Documents/BAE')
+os.chdir('/home/user/Documents/eeg_augmentation_benchmark')
 hist_path = Path('./outputs/hist/drago5/no_rng/')
 PER_CLASS = True
 METRIC = f1_score
