@@ -1,0 +1,21 @@
+name: braindecode
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+- python>=3.7
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- pytorch
+- pip
+- joblib
+- pip:
+  - mne
+  - moabb
+  - git+https://github.com/braindecode/braindecode.git
+  - git+https://github.com/skorch-dev/skorch.git
+
+

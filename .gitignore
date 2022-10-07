@@ -1,0 +1,14 @@
+*.png
+*.json
+*.pkl
+*.pt 
+*.pyc
+*.ipynb
+*egg-info
+*.txt
+*.fif
+.DS_Store
+tmp
+outputs
+
+outputs/*
