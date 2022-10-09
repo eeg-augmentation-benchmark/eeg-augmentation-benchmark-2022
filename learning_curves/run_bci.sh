@@ -8,7 +8,7 @@ python ./experiments/learning_curve.py \
  -n 9 \
  -p 0.5 \
  -r 19 \
- -t IdentityTransform FTSurrogate GaussianNoise SignFlip SmoothTimeMask TimeReverse FrequencyShift ChannelsDropout ChannelsShuffle BandstopFilter ChannelsSymmetry SensorXRotation SensorYRotation SensorZRotation \
+ -t IdentityTransform FTSurrogate GaussianNoise SignFlip SmoothTimeMask TimeReverse FrequencyShift ChannelsDropout ChannelsShuffle BandstopFilter ChannelsSymmetry SensorsXRotation SensorsYRotation SensorsZRotation \
  -o ./outputs/BCI/learning_curves \
  -s lr_all_transforms \
  -j 5 \

@@ -10,7 +10,7 @@ python ./experiments/param_search.py \
  -r 19 \
  -o ./outputs/BCI/param_search \
  -s ps_all_transforms \
- -t IdentityTransform FTSurrogate GaussianNoise SmoothTimeMask FrequencyShift ChannelsDropout ChannelsShuffle BandstopFilter SensorXRotation SensorYRotation SensorZRotation \
+ -t IdentityTransform FTSurrogate GaussianNoise SmoothTimeMask FrequencyShift ChannelsDropout ChannelsShuffle BandstopFilter SensorsXRotation SensorsYRotation SensorsZRotation \
  -j 5 \
  -d BCI \
  --device $1 \

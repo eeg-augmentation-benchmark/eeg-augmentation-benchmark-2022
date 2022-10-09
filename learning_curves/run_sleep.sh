@@ -9,7 +9,7 @@ python ./experiments/learning_curve.py \
  -r 19 \
  -o ./outputs/physionet/learning_curves \
  -s lr_all_transforms \
- -t IdentityTransform FTSurrogate GaussianNoise SignFlip SmoothTimeMask TimeReverse FrequencyShift ChannelsDropout ChannelsShuffle BandstopFilter ChannelsSymmetry SensorXRotation SensorYRotation SensorZRotation \
+ -t IdentityTransform FTSurrogate GaussianNoise SignFlip SmoothTimeMask TimeReverse FrequencyShift ChannelsDropout ChannelsShuffle BandstopFilter ChannelsSymmetry SensorsXRotation SensorsYRotation SensorsZRotation \
  -j 5 \
  -d SleepPhysionet \
  --device $1 \
