@@ -1,4 +1,5 @@
 # %% imports
+from pathlib import Path
 from copy import copy
 
 import matplotlib.pyplot as plt
@@ -48,8 +49,10 @@ cbar.set_label('$\\sigma$')
 ax.set_ylabel(ax.get_ylabel())
 ax.set_xlabel(ax.get_xlabel())
 plt.tight_layout()
-plt.savefig('../outputs/physionet/figures/PSD_GaussianNoise.pdf')
-plt.savefig('../outputs/physionet/figures/PSD_GaussianNoise.png')
+fig_dir = Path(__file__).parent / '..' / 'outputs/physionet/figures/'
+fig_dir.mkdir(parents=True, exist_ok=True)
+plt.savefig(fig_dir / 'PSD_GaussianNoise.pdf')
+plt.savefig(fig_dir / 'PSD_GaussianNoise.png')
 plt.show()
 
 # %%

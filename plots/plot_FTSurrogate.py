@@ -1,4 +1,5 @@
 # %% imports
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 from braindecode.augmentation import FTSurrogate
@@ -82,8 +83,10 @@ axes[1].legend(fontsize=FONTSIZE, ncol=2, loc='upper right',
                bbox_to_anchor=(1, 1.1), frameon=True)
 axes[1].set_xlabel('Time (s)', fontsize=FONTSIZE)
 fig.tight_layout()
-plt.savefig("../outputs/physionet/figures/FTSurrogate_K.pdf")
-plt.savefig("../outputs/physionet/figures/FTSurrogate_K.png")
+fig_dir = Path(__file__).parent / '..' / 'outputs/physionet/figures/'
+fig_dir.mkdir(parents=True, exist_ok=True)
+plt.savefig(fig_dir / "FTSurrogate_K.pdf")
+plt.savefig(fig_dir / "FTSurrogate_K.png")
 plt.show()
 
 # %%

@@ -97,8 +97,22 @@ def get_dataset(name, n_subjects, n_jobs=1, recording_ids=None, preload=True,
         Number of subjects to extract from the dataset.
     n_jobs:
         Number of workers for the parallelisation of the windowing.
+    recording_ids: list
+        The ids of the recordings to load.
+    preload: bool
+        Whether to preload the data or not.
     cachedir: str | None
-        XXX
+        Where to cache the dataset.
+    exp_mov_std: bool
+        Whether to apply exponential moving standardization or not.
+    fmin: float | None
+        Minimum frequency to filter the data.
+    fmax: float | None
+        Maximum frequency to filter the data.
+    tmin: float | None
+        Minimum time to crop the data.
+    tmax: float | None
+        Maximum time to crop the data.
 
     Returns:
     --------
@@ -135,6 +149,8 @@ def get_dataset(name, n_subjects, n_jobs=1, recording_ids=None, preload=True,
             fmax = 30
         preprocessors = [
             Preprocessor('pick', picks=['Fpz-Cz', 'Pz-Oz']),
+            Preprocessor('rename_channels',
+                         mapping={'Fpz-Cz': 'Fpz', 'Pz-Oz': 'Pz'}),
             Preprocessor('load_data'),
             Preprocessor(lambda x: x * 1e6),
             Preprocessor('filter', l_freq=None, h_freq=fmax),
@@ -155,7 +171,7 @@ def get_dataset(name, n_subjects, n_jobs=1, recording_ids=None, preload=True,
             window_stride_samples=3000,
             preload=preload,
             n_jobs=n_jobs,
-            picks=['Fpz-Cz', 'Pz-Oz']
+            picks=['Fpz', 'Pz']
         )
         t0 = time.time()
         preprocess(windows, [Preprocessor(fn=scale, channel_wise=True)])
