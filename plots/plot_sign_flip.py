@@ -1,4 +1,5 @@
 # %% imports
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 from braindecode.augmentation import SignFlip
@@ -70,8 +71,10 @@ axes[1].legend(
 # axes[1].set_xticklabels(np.array(axes[1].get_xticks(), dtype=int) / 100)
 axes[1].set_xlabel('Time (s)', fontsize=FONTSIZE)
 fig.tight_layout()
-plt.savefig('../outputs/physionet/figures/sign_flip.pdf')
-plt.savefig('../outputs/physionet/figures/sign_flip.png')
+fig_dir = Path(__file__).parent / '..' / 'outputs/physionet/figures/'
+fig_dir.mkdir(parents=True, exist_ok=True)
+plt.savefig(fig_dir / 'sign_flip.pdf')
+plt.savefig(fig_dir / 'sign_flip.png')
 # %%
 
 map_stage = {0: 4, 4: 3, 1: 2, 2: 1, 3: 0}
@@ -89,7 +92,7 @@ plt.yticks(
     labels=['N3', 'N2', 'N1', 'REM', 'Wake'],
     fontsize=FONTSIZE)
 plt.tight_layout()
-plt.savefig('../outputs/physionet/figures/sleep_staging.pdf')
-plt.savefig('../outputs/physionet/figures/sleep_staging.png')
+plt.savefig(fig_dir / 'sleep_staging.pdf')
+plt.savefig(fig_dir / 'sleep_staging.png')
 plt.show()
 # %%

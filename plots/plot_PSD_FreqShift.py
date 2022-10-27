@@ -1,5 +1,6 @@
 # %% imports
 
+from pathlib import Path
 import matplotlib.pyplot as plt
 import torch
 from braindecode.augmentation import FrequencyShift
@@ -78,8 +79,10 @@ ax.legend(
     bbox_to_anchor=(0.65, 0.7)
 )
 fig.tight_layout()
-plt.savefig('../outputs/physionet/figures/PSD_FreqShift.pdf')
-plt.savefig('../outputs/physionet/figures/PSD_FreqShift.png')
+fig_dir = Path(__file__).parent / '..' / 'outputs/physionet/figures/'
+fig_dir.mkdir(parents=True, exist_ok=True)
+plt.savefig(fig_dir / 'PSD_FreqShift.pdf')
+plt.savefig(fig_dir / 'PSD_FreqShift.png')
 plt.show()
 
 # %%

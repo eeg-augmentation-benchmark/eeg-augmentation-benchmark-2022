@@ -184,7 +184,7 @@ def main():
         sname = args.save_name if args.save_name else str(
             '-'.join(args.transformations) + '-' + current_time
         )
-        df.to_pickle(output / sname + '.pkl')
+        df.to_pickle(output / (sname + '.pkl'))
 
 
 if __name__ == "__main__":

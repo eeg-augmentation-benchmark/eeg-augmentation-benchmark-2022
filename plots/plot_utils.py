@@ -140,11 +140,11 @@ def get_tfs_names(df, tfs_category):
 def get_windows():
     # Load SleepPhysionet for plots, without scaling
     dataset_dir_name = "SleepPhysionet_78_plot"
-    cachedir = "../tmp"
-    load_from_cache = (Path(cachedir) / dataset_dir_name).exists()
+    cachedir = Path(__file__).parent / ".." / "tmp"
+    load_from_cache = (cachedir / dataset_dir_name).exists()
 
     if load_from_cache:
-        windows = load_concat_dataset(Path(cachedir) / dataset_dir_name,
+        windows = load_concat_dataset(cachedir / dataset_dir_name,
                                       preload=True)
     else:
         SUBJECT_IDS = np.delete(np.arange(83), [39, 68, 69, 78, 79])
@@ -184,7 +184,7 @@ def get_windows():
         print(f"Windows preproc time: {time.time() - t0}")
 
     if not load_from_cache:
-        output_dir = Path(cachedir) / dataset_dir_name
+        output_dir = cachedir / dataset_dir_name
         output_dir.mkdir(exist_ok=True, parents=True)
-        windows.save(Path(cachedir) / dataset_dir_name, overwrite=True)
+        windows.save(cachedir / dataset_dir_name, overwrite=True)
     return windows

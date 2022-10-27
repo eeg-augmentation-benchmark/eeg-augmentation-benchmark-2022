@@ -1,4 +1,5 @@
 # %% imports
+from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
@@ -97,7 +98,9 @@ axes[0].legend(fontsize=FONTSIZE, ncol=2, loc='upper center',
 axes[1].legend(fontsize=FONTSIZE, ncol=3, loc='upper center',
                bbox_to_anchor=(0.2, 0.35), frameon=True)
 fig.tight_layout()
-plt.savefig("../outputs/physionet/figures/time_reverse_K.pdf")
-plt.savefig("../outputs/physionet/figures/time_reverse_K.png")
+fig_dir = Path(__file__).parent / '..' / 'outputs/physionet/figures/'
+fig_dir.mkdir(parents=True, exist_ok=True)
+plt.savefig(fig_dir / "time_reverse_K.pdf")
+plt.savefig(fig_dir / "time_reverse_K.png")
 plt.show()
 # %%
